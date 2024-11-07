@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo" />
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Pesquisar...">
+        </div>
+        <div class="hamburger" onclick="toggleMenu(event)">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleMenu(event)">✖</button>
+        <a href="index.html">Página Inicial</a>
+        <a href="Sobre_Nós.html">Sobre Nós</a>
+        <a href="Vagas.html">Vagas</a>
+    </div>
+    <h1>Meu Perfil</h1>
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+    <script>
+        function toggleMenu(event) {
+            event.stopPropagation(); // Impede a propagação do clique
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+ 
+        function closeMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
+ 

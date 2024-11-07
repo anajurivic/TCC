@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImmiTech</title>
+ 
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+   
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jersey+25&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo" />
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Pesquisar...">
+        </div>
+        <div class="hamburger" onclick="toggleMenu(event)">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+    <!--SIDEBAR-->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="toggleMenu(event)">✖</button>
+        <a href="Sobre_Nós.html">Sobre Nós</a>
+        <a href="Meu_Perfil.html">Meu Perfil</a>
+        <a href="Vagas.html">Vagas</a>
+    </div>
+ 
+    <div class="image-container">
+        <img src="img/Mídia (1).jpeg" alt="Mãos Dadas">
+        <div class="transparent-overlay"></div>
+    </div>
+ 
+    <h1 class="h1">Nossa Missão</h1>
+    <p class="texto"> Este site tem como missão promover a inclusão de imigrantes e refugiados no Brasil, facilitando o acesso a oportunidades de emprego e recursos essenciais. Acreditamos que todos merecem uma chance de recomeçar e contribuir para a sociedade.</p>
+       
+    <h1 class="h1t">Importância do Apoio</h1>
+ 
+    <p class="texto2"> Com o aumento do número de imigrantes e refugiados, é fundamental oferecer suporte para superar desafios como barreiras linguísticas e dificuldades de integração. Esse apoio não apenas promove justiça social, mas também enriquece nossa cultura e economia.
+       
+        Estamos aqui para conectar ONGs, empresas e imigrantes, criando um ambiente acolhedor e inclusivo. Junte-se a nós nessa jornada de transformação e acolhimento!</p>
+         <br>
+         <br>
+        <div class="card" style="width: 18rem;">
+            <img src="img/card_mao.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">ONGs Cadastradas</h5>
+              <p class="card-text">Veja todas as ONGs cadastradas em nosso site!</p>
+              <a href="ONGs_Cad.html" class="btn btn-primary">Clique Aqui</a>
+            </div>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+ 
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+    <script>
+        function toggleMenu(event) {
+            event.stopPropagation(); // Impede a propagação do clique
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+ 
+        function closeMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
+ 
+ 

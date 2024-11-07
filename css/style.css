@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+ 
+.h1{
+  padding-left: 15px;
+  font-family: 'Jersey 25', serif; /* Classe para usar a fonte Jersey 25 */
+  font-weight: 300;
+}
+ 
+.h1t{
+    padding-left: 15px;
+    font-family: 'Jersey 25', serif; /* Classe para usar a fonte Jersey 25 */
+    font-weight: 300;
+}
+ 
+/* Fontes do Google Fonts */
+body {
+    font-family: 'DM Sans', sans-serif; /* Defina a fonte padrão para o corpo */
+}
+ 
+.jersey-25-regular {
+    font-family: 'Jersey 25', serif; /* Classe para usar a fonte Jersey 25 */
+}
+ 
+.card {
+    width: 300px; /* Largura do card */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px auto; /* Centraliza o card na página */
+    background-color: #ff8023; /* Cor de fundo do card */
+    border: 2px solid #742fff; /* Borda do card */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra do card */
+}
+ 
+.card-title{
+    font-size: 20px;
+}
+ 
+.btn-primary{
+    display: inline-block; /* Permite adicionar padding e margin */
+    padding: 10px 20px; /* Espaçamento interno */
+    color: #000000; /* Cor do texto */
+    background-color: #742fff; /* Cor de fundo do botão */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s; /* Efeito de transição */
+}
+ 
+.btn-primary:hover {
+    background-color: #c17fff; /* Cor ao passar o mouse */
+}
+ 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 20px; /* Ajuste o padding conforme necessário */
+    background-color: #ff8023; /* Cor de fundo */
+    border: 1px solid #ff8023; /* Borda da caixa */
+    box-shadow: 0 2px 5px #c17fff; /* Sombra opcional */
+    position: fixed; /* Fixa a navbar no topo */
+    top: 0; /* Alinha ao topo da página */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+}
+ 
+ 
+.content {
+    padding-top: 80px; /* Cria espaço abaixo da navbar fixa */
+}
+ 
+ 
+.logo img {
+    height: 60px; /* Diminuir a altura da logo */
+    width: 80px;  /* Mantém a proporção */
+}
+ 
+.search-container {
+    flex-grow: 1;
+    margin: 0 20px;
+}
+ 
+.search-container input {
+    width: 28%;
+    height: 25px;
+    padding: 8px;
+    border: none;
+    border-radius: 100px;
+    background-color: #ffffff;
+}
+ 
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+ 
+.hamburger:hover {
+    background-color: #c17fff;
+}
+ 
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 2px 0;
+    transition: all 0.3s ease;
+    border-radius: 150px; /* Arredonda as pontas das barras */
+}
+ 
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Oculta inicialmente à direita */
+    width: 250px;
+    height: 100%;
+    padding: 50px 0px;
+    background-color: #ff8023;
+    box-shadow: -2px 0 5px #c17fff;
+    transition: right 0.3s ease; /* Transição suave */
+    z-index: 1000; /* Garante que a sidebar fique acima da sobreposição */
+}
+ 
+.sidebar.active {
+    right: 0; /* Move para a posição visível */
+}
+ 
+.sidebar a {
+    display: block;
+    padding: 15px;
+    color: #000;
+    text-decoration: none;
+}
+ 
+.sidebar a:hover {
+    background-color: #c17fff; /* Efeito hover */
+}
+ 
+.image-container {
+    position: relative;
+    display: inline-block; /* Ajusta o tamanho da div conforme a imagem */
+}
+ 
+.image-container img {
+    display: block; /* Remove espaços embaixo da imagem */
+    width: 100%; /* Ajusta a largura conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+ 
+.transparent-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 95%);
+    /* Gradiente que vai de transparente para branco na metade */
+    pointer-events: none; /* Permite interações com a imagem abaixo */
+}
+ 
+.texto{
+    margin-top: 20px;    /* Espaço acima */
+    margin-bottom: 20px; /* Espaço abaixo */
+    margin-left: 15px;   /* Espaço à esquerda */
+    margin-right: 15px;  /* Espaço à direita */
+}
+ 
+.texto2{
+    margin-top: 20px;    /* Espaço acima */
+    margin-bottom: 20px; /* Espaço abaixo */
+    margin-left: 15px;   /* Espaço à esquerda */
+    margin-right: 15px;  /* Espaço à direita */
+}
+ 
+.close-btn {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute; /* Torna a posição absoluta em relação à sidebar */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da direita */
+}
+ 
+.close-btn:hover {
+    background-color: #c17fff;
+}
+ 
+.overlay {
+    display: none; /* Oculta inicialmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparente */
+    z-index: 500; /* Abaixo da sidebar, mas acima do conteúdo */
+}
+ 
+.overlay.active {
+    display: block; /* Mostra a sobreposição quando ativa */
+}
+ 
+ 
